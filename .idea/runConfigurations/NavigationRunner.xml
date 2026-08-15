@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="NavigationRunner" type="JUnit" factoryName="JUnit">
+    <module name="appium-serenity" />
+    <option name="PACKAGE_NAME" value="edu.pe.cibertec.runners" />
+    <option name="MAIN_CLASS_NAME" value="edu.pe.cibertec.runners.NavigationRunner" />
+    <option name="TEST_OBJECT" value="class" />
+    <!--
+      Mismo motivo que el argLine del pom: en Windows el JDK implementa el Selector
+      que necesita el cliente HTTP de Selenium con un socket AF_UNIX dentro de %TEMP%,
+      y en esta maquina esa carpeta los bloquea ("Unable to establish loopback connection").
+    -->
+    <option name="VM_PARAMETERS" value="-Djdk.net.unixdomain.tmpdir=$PROJECT_DIR$/target" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
