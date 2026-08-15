@@ -95,6 +95,8 @@ public class NavegacionStepDefinitions {
 
     @Entonces("el campo del dialogo deberia contener {string}")
     public void el_campo_del_dialogo_deberia_contener(String textoEsperado) {
-
+        OnStage.theActorInTheSpotlight().should(
+                seeThat(net.serenitybdd.screenplay.questions.Text.of(ApiDemosScreen.campoDialogo()), org.hamcrest.CoreMatchers.equalTo(textoEsperado))
+        );
     }
 }
